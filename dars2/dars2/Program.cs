@@ -4,10 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter number :");
-            var son = int.Parse(Console.ReadLine());
-            var son2 = int.Parse(Console.ReadLine());   
-            var res = son * son2;
+            var dayValue = int.Parse(Console.ReadLine());
+            var timeValue = int.Parse(Console.ReadLine());
+            var res = $"{ dayValue * 24 + timeValue}  >>> soat ";
             Console.WriteLine(res);
         }
     }
