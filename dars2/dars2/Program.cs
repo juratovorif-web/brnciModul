@@ -21,6 +21,7 @@
             Console.WriteLine(res);
             */
 
+            /*
             Console.Write("akmalni daqiqasga newta belgi yozad :");
             var akmalEnterStringNumbers = int.Parse(Console.ReadLine());
             var belgilar = akmalEnterStringNumbers * 2.5;
@@ -28,6 +29,23 @@
              
            
             Console.WriteLine($"{soz} ta yozdi");
+            */
+
+            Console.Write("Enter bino: ");
+            var binoVAlue = int.Parse(Console.ReadLine());  
+            Console.Write("Enter qavat: ");
+            var qavatValue = int.Parse(Console.ReadLine());
+            Console.Write("Enter xona: ");
+            var xonaValue = int.Parse(Console.ReadLine());
+            Console.Write("Enter stul: ");
+            var stulValue = int.Parse(Console.ReadLine());
+
+
+            var parta = (binoVAlue * xonaValue) + (qavatValue * stulValue);
+            var res = parta / 2;
+            Console.WriteLine($"{res} ta parta bor!");
+
+            Main(args);
         }
     }
 }
