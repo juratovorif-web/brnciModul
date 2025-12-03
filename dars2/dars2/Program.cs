@@ -1,4 +1,6 @@
-﻿namespace dars2
+﻿using System.Transactions;
+
+namespace dars2
 {
     internal class Program
     {
@@ -47,12 +49,29 @@
             **/
 
 
-            var firstNumber = int.Parse(Console.ReadLine());    
-            var secondNumber = int.Parse(Console.ReadLine());    
-            var theriNumber = int.Parse(Console.ReadLine());
+            /**
+            Console.Write("Enter number : ");
+            var n = int.Parse(Console.ReadLine());
 
-            var temp = firstNumber;
-            if (temp > secondNumber && theriNumber < temp)
+            var onlik = n % 10;
+            var brlik = n / 10;
+           
+            if (onlik + brlik > 10)
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
+            */
+
+
+            var kopaytmaYgrmadanOwsa = int.Parse(Console.ReadLine());
+
+            var onlik = kopaytmaYgrmadanOwsa % 10;
+            var brlik = kopaytmaYgrmadanOwsa / 10;
+            if (onlik * brlik > 20)
             {
                 Console.WriteLine(true);
             }
