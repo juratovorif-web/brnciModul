@@ -30,7 +30,7 @@
            
             Console.WriteLine($"{soz} ta yozdi");
             */
-
+            /**
             Console.Write("Enter bino: ");
             var binoVAlue = int.Parse(Console.ReadLine());  
             Console.Write("Enter qavat: ");
@@ -44,8 +44,23 @@
             var parta = (binoVAlue * xonaValue) + (qavatValue * stulValue);
             var res = parta / 2;
             Console.WriteLine($"{res} ta parta bor!");
+            **/
 
-            Main(args);
+
+            var firstNumber = int.Parse(Console.ReadLine());    
+            var secondNumber = int.Parse(Console.ReadLine());    
+            var theriNumber = int.Parse(Console.ReadLine());
+
+            var temp = firstNumber;
+            if (temp > secondNumber && theriNumber < temp)
+            {
+                Console.WriteLine(true);
+            }
+            else
+            {
+                Console.WriteLine(false);
+            }
+            
         }
     }
 }
