@@ -128,20 +128,143 @@
 
 
             // 1. 14
+            //var res = 0;
+            //for (var i = 1; i < 100;  i++)
+            //{
+            //    if ( i % 2 != 0 )
+            //    {
+            //        res += i;
+            //    }
+            //}
+            //    Console.WriteLine(res);
+
+
+            // 1. 15
+            //var res = 0;
+            //for (var i = 100; i <= 999; i++)
+            //{
+            //    var brli = i % 10;
+            //    var onli = (i / 10) % 10;
+            //    var yuzli = i / 100;
+            //    res = brli + onli + yuzli;
+            //    if (res > 20)
+            //    {
+            //        Console.WriteLine(res);
+            //    }
+            //}
+
+
+            // 1.16
+            //var res = 0;
+            //for (var i = 100; i <= 999; i++)
+            //{
+            //    var brli = i % 10;
+            //    var onli = (i / 10) % 10;
+            //    var yuzli = i / 100;
+
+            //   if (brli == yuzli)
+            //    {
+            //      Console.WriteLine(i);
+            //    }
+            //}
+
+
+            // 1.17
+            //for (var i = 10; i < 100; i++)
+            //{
+            //    var onlik = i % 10;
+            //    var brlik = i / 10;
+            //     if (onlik * brlik > 12 && onlik + brlik > 12)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+
+            //}
+
+
+            // 1.18
+            //var res = 0;
+            //for (var i = 100; i < 1000; i++)
+            //{
+            //    var onlik = i % 10;
+            //    if (onlik == 2 || onlik == 5)
+            //    {
+            //        res++;
+            //    }
+
+            //}
+            //Console.WriteLine(res);
+
+
+
+            // 1.19
+            //Console.Write("Enter number: ");
+            //var number = int.Parse(Console.ReadLine());
+            //for (var i = 0; i < number; i++)
+            //{
+            //    Console.WriteLine(number);
+            //}
+
+
+            // 1.20
+            //var firstNumber = int.Parse (Console.ReadLine());
+            //var secondNumber = int.Parse (Console.ReadLine());
+            //for (var i = 0; i < secondNumber; i++)
+            //{
+            //    Console.WriteLine(firstNumber);
+            //}
+
+
+            // 1.21
+            //var firstNumber = int.Parse(Console.ReadLine());
+            //var secondNumber = int.Parse(Console.ReadLine());
+            //for (var i = 0; i < firstNumber; i++)
+            //{
+            //    Console.WriteLine(secondNumber);
+            //}
+
+
+            // 1.22
+            //var firstNumber = int.Parse(Console.ReadLine());
+
+            //for (var i = 1; i < firstNumber; i++)
+            //{
+            //    if (firstNumber % i == 0)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+
+            //}
+
+
+            // 1.23
+            //var firstNumber = int.Parse(Console.ReadLine());
+            //var res = 0;
+            //for (var i = 1; i < firstNumber; i++)
+            //{
+            //    if (firstNumber % i == 0)
+            //    {
+            //        res++;
+            //    }
+            //}
+            //Console.WriteLine(res);
+
+
+
+            // 1.24
+            var firstNumber = int.Parse(Console.ReadLine());
             var res = 0;
-            for (var i = 1; i < 100;  i++)
+            for (var i = 1; i < firstNumber; i++)
             {
-                if ( i % 2 != 0 )
+                if (firstNumber % i == 0)
                 {
-                    res += i;
+                    res = res + i;
                 }
             }
-                Console.WriteLine(res);
+            Console.WriteLine(res);
 
 
 
-
-
-        }
+        }   
     }
 }
