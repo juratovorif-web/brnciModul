@@ -252,18 +252,66 @@
 
 
             // 1.24
+            //var firstNumber = int.Parse(Console.ReadLine());
+            //var res = 0;
+            //for (var i = 1; i < firstNumber; i++)
+            //{
+            //    if (firstNumber % i == 0)
+            //    {
+            //        res = res + i;
+            //    }
+            //}
+            //Console.WriteLine(res);
+
+
+            // 1.27
+
+            //Console.Write("Enter wakar kg: ");
+            //var wakarValue = int.Parse(Console.ReadLine());
+            //var wakarKgValue = 7000;
+            //var res = wakarValue * wakarKgValue;
+            //Console.WriteLine($"{res} som : ");
+
+
+            // 1.28
+            //var n = int.Parse(Console.ReadLine());
+            //for (var i = 1; i < n; i++) 
+            //{
+            //    if (i % 3 != 0)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //}
+
+
+            // 1.29
             var firstNumber = int.Parse(Console.ReadLine());
-            var res = 0;
+            var secondNumber = int.Parse(Console.ReadLine());
+            var firstres = 0;
+            var secondres = 0;
             for (var i = 1; i < firstNumber; i++)
             {
                 if (firstNumber % i == 0)
                 {
-                    res = res + i;
+                    firstres++;
                 }
             }
-            Console.WriteLine(res);
-
-
+            for (var j = 1; j < secondNumber; j++)
+            {
+               if (secondNumber % j == 0)
+               {
+                   secondres++;
+               }
+            }
+            
+                if (firstres > secondres)
+                {
+                    Console.WriteLine(firstNumber);
+                }
+                else
+                {
+                    Console.WriteLine(secondNumber);
+                }
 
         }   
     }
