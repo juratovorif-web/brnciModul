@@ -4,7 +4,18 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var firstNumber = int.Parse(Console.ReadLine());
+            var secondNumber = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(QowbCqarw(firstNumber, secondNumber));
+        }
+
+
+        static int QowbCqarw(int a, int b)
+        {
+
+            return a + b;
         }
     }
+
 }

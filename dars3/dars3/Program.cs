@@ -1,7 +1,4 @@
-﻿using Microsoft.Win32.SafeHandles;
-using System.Globalization;
-
-namespace dars3
+﻿namespace dars3
 {
     internal class Program
     {
@@ -430,25 +427,85 @@ namespace dars3
             //Console.WriteLine(sanoq);
 
 
+            // 2.9
+            //var number = int.Parse(Console.ReadLine());
+            //var sanoq = 0;
+            //while (number > 0)
+            //{
 
-            var number = int.Parse(Console.ReadLine());
-            var sanoq = 0;
-            while (number > 0)
-            {
-               
-                if (number > 50)
-                {
-                    sanoq += number;
-                }
-               
-                number = int.Parse(Console.ReadLine());
-            }
-            Console.WriteLine(sanoq);
+            //    if (number > 50)
+            //    {
+            //        sanoq += number;
+            //    }
+
+            //    number = int.Parse(Console.ReadLine());
+            //}
+            //Console.WriteLine(sanoq);
+
+
+            // 2.10
+            //var number = int.Parse(Console.ReadLine());
+            //var sanoq = 0;
+            //while (number % 2 == 0)
+            //{
+
+            //    if (number > 0)
+            //    {
+            //        sanoq += number;
+            //    }
+
+            //    number = int.Parse(Console.ReadLine());
+            //}
+            //Console.WriteLine(sanoq);
+
+
+
+            // 2.11
+            //var number = int.Parse(Console.ReadLine());
+            //var bor = true;
+            //while (number != 0)
+            //{
+            //    if (number == 5)
+            //    {
+            //        bor = true ;
+            //    }
+            //        number = int.Parse(Console.ReadLine());
+            //    if (bor)
+            //    {
+            //        Console.WriteLine("bor");
+            //    }
+            //    {
+            //        Console.WriteLine("yoq");
+            //    }
+
+            //}
+
+
+
+
+
+
+
+
+
+
+            //4 dars
+
+
+
+            var str = Console.ReadLine();
+            var res = str.Length - 3;
+            var natija = str.Substring(res, 3);
+            Console.WriteLine(natija);
+
+
+
+
 
         }
 
 
 
-        
+
     }
 }
