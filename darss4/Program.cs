@@ -13,7 +13,7 @@
 
         static int QowbCqarw(int a, int b)
         {
-
+            //njn
             return a + b;
         }
     }
