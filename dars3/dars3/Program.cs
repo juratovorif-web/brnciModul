@@ -1,4 +1,7 @@
-﻿namespace dars3
+﻿using Microsoft.Win32.SafeHandles;
+using System.Globalization;
+
+namespace dars3
 {
     internal class Program
     {
@@ -285,34 +288,167 @@
 
 
             // 1.29
-            var firstNumber = int.Parse(Console.ReadLine());
-            var secondNumber = int.Parse(Console.ReadLine());
-            var firstres = 0;
-            var secondres = 0;
-            for (var i = 1; i < firstNumber; i++)
-            {
-                if (firstNumber % i == 0)
-                {
-                    firstres++;
-                }
-            }
-            for (var j = 1; j < secondNumber; j++)
-            {
-               if (secondNumber % j == 0)
-               {
-                   secondres++;
-               }
-            }
-            
-                if (firstres > secondres)
-                {
-                    Console.WriteLine(firstNumber);
-                }
-                else
-                {
-                    Console.WriteLine(secondNumber);
-                }
+            //var firstNumber = int.Parse(Console.ReadLine());
+            //var secondNumber = int.Parse(Console.ReadLine());
+            //var firstres = 0;
+            //var secondres = 0;
+            //for (var i = 1; i < firstNumber; i++)
+            //{
+            //    if (firstNumber % i == 0)
+            //    {
+            //        firstres++;
+            //    }
+            //}
+            //for (var j = 1; j < secondNumber; j++)
+            //{
+            //   if (secondNumber % j == 0)
+            //   {
+            //       secondres++;
+            //   }
+            //}
 
-        }   
+            //    if (firstres > secondres)
+            //    {
+            //        Console.WriteLine(firstNumber);
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine(secondNumber);
+            //    }
+
+
+
+            // 2.3
+            //var son = int.Parse(Console.ReadLine());
+            //var res = 0;
+            //while (son > 0)
+            //{
+            //    var number = son % 10;
+            //    if (number % 2 == 0)
+            //    {
+            //        res++;
+
+            //    }
+            //        son /= 10;  
+
+            //}
+            //Console.WriteLine(res);
+
+
+            // 2.2
+            //var num = int.Parse(Console.ReadLine());
+            //var res = 0;
+
+            //while(num > 0)
+            //{
+            //    var raqam = num % 10;
+            //    res = res + raqam;
+            //    num = num / 10;
+            //}
+            //Console.WriteLine(res);
+
+            // 2.4
+            //var son = int.Parse(Console.ReadLine());
+            //var res = 0;
+            //while (son > 0)
+            //{
+            //    var r = son % 10;
+            //   if (son % 2 != 0)
+            //    {
+            //        res++;
+            //    }
+            //   son /= 10;
+            //}
+            //Console.WriteLine(res);
+
+            // 2.3
+            //var son = int.Parse(Console.ReadLine());
+            //var res = 0;
+            //while (son > 0)
+            //{
+            //    var r = son % 10;
+            //    if (son % 2 == 0)
+            //    {
+            //        res++;
+            //    }
+            //    son /= 10;
+            //}
+            //Console.WriteLine(res);
+
+
+            // 2.5
+            //var number = int.Parse(Console.ReadLine());
+            //var sanoq = 0;
+            //while (number != 0)
+            //{
+            //    sanoq++;
+            //    number = int.Parse(Console.ReadLine());
+            //}
+            //Console.WriteLine(sanoq);
+
+
+
+            // 2.6
+            //var number = int.Parse(Console.ReadLine());
+            //var sanoq = 0;
+            //while (number != 0)
+            //{
+            //    if (number > 10)
+            //    {
+            //        sanoq++;
+            //    }
+            //        number = int.Parse(Console.ReadLine());
+            //}
+            //Console.WriteLine(sanoq);
+
+
+
+            // 2.7
+            //var number = int.Parse(Console.ReadLine());
+            //var sanoq = 0;
+            //while (number > 0)
+            //{
+            //    var digit = number % 10;  
+            //    sanoq += digit;          
+            //    number /= 10;             
+            //     number = int.Parse(Console.ReadLine());
+            //}
+            //Console.WriteLine(sanoq);
+
+
+
+            // 2.8
+            //var number = int.Parse(Console.ReadLine());
+            //var sanoq = 1;
+            //while (number > 1)
+            //{
+            //    var digit = number % 10; 
+            //    sanoq *= digit;          
+            //    number /= 10;             
+            //    number = int.Parse(Console.ReadLine());
+            //}
+            //Console.WriteLine(sanoq);
+
+
+
+            var number = int.Parse(Console.ReadLine());
+            var sanoq = 0;
+            while (number > 0)
+            {
+               
+                if (number > 50)
+                {
+                    sanoq += number;
+                }
+               
+                number = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine(sanoq);
+
+        }
+
+
+
+        
     }
 }
