@@ -63,14 +63,14 @@
 
             // 19
             var a = Console.ReadLine();
-            var b = Console.ReadLine();         //
-            Console.WriteLine(MakeAbba(a,b));
+
+            Console.WriteLine(WithOutEnd(a));
 
 
-           
-            
-           
-            
+
+
+
+
 
         }
 
@@ -226,7 +226,7 @@
                 }
                 else
                 {
-                    res += str[i];   
+                    res += str[i];
                 }
 
             }
@@ -236,9 +236,9 @@
         static int OkCounter(string str)  // 17
         {
             var res = 0;
-            for(var i = 0; i < str.Length - 1; i++)
+            for (var i = 0; i < str.Length - 1; i++)
             {
-                if (str.Substring(i,2) == "ok")
+                if (str.Substring(i, 2) == "ok")
                 {
                     res++;
                 }
@@ -249,7 +249,7 @@
         static string StarLetterString(string str) // 18
         {
             var res = string.Empty;
-            for (var i = 0;i < str.Length;i++)
+            for (var i = 0; i < str.Length; i++)
             {
                 if (char.IsLower(str[i]))
                 {
@@ -266,7 +266,7 @@
         static string LowerAll(string str) // 19
         {
             var res = string.Empty;
-            for ( var i = 0;i < str.Length; i++)
+            for (var i = 0; i < str.Length; i++)
             {
                 if (char.IsLower(str[i]))
                 {
@@ -274,7 +274,7 @@
                 }
                 else
                 {
-                     res += str[i];
+                    res += str[i];
                 }
             }
             return res;
@@ -309,28 +309,85 @@
             }
             return count;
         }
-        
+
         static string HelloName(string str)    //   1.4.1 txt
         {
             var res = string.Empty;
-             
-            return res += $"Hello {str}!"; 
+
+            return res += $"Hello {str}!";
         }
 
-        static string MakeAbba(string a , string b) // 2
+        static string MakeAbba(string a, string b) // 2
         {
             var res = string.Empty;
             return res = $"{a}{b}{b}{a}";
         }
 
-        static string MakeOutWord(string a , string b)
+        static string MakeOutWord(string a, string b) // 3
         {
             var res = string.Empty;
             a.Substring(2, a.Length - 2);
-            return res = a += b;
+            return res = $"{a}{b}";
         }
 
+        static string ExtraEnd(string str)// 4
+        {
+            var res = string.Empty;
+            foreach (char v in str)
+            {
+                if (str.Length < 2)
+                {
+                    return str;
+                }
+                var qow = str.Substring(str.Length - 2, 2);
+
+                return $"{qow}{qow}{qow}";
+            }
+            return res;
 
 
+
+
+        }
+
+        static string FirstTwo(string str)// 5
+        {
+            var res = string.Empty;
+            foreach (char v in str)
+            {
+                if (str.Length > 2)
+                {
+                    return str;
+                }
+                var qow = str.Substring(str.Length - 2, 2);
+
+                return $"{qow}{qow}{qow}";
+            }
+            return res;
+
+
+
+
+
+        }
+
+        static string FirstHarf(string str)// 6
+        {
+            var harf = str.Length / 2;             
+            return str.Substring(0, harf);
+        }
+
+        static string WithOutEnd(string str)
+        {
+            if (str == null)
+            {
+                throw new ArgumentNullException(nameof(str));
+            }
+            if (str.Length < 2)
+            {
+                return string.Empty;
+            }
+            return str.Substring(1, str.Length - 2);
+        }
     }
 }
