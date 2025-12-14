@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "darss8hmwwork": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
