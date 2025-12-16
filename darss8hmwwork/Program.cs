@@ -4,77 +4,117 @@ namespace darss8hmwwork
 {
     internal class Program
     {
-        static List<string> Names = new List<string>();
+        static List<string> Person = new List<string>();
         static void Main(string[] args)
         {
             
             while(true)
             {
-                Console.WriteLine("1. Create ");
-                Console.WriteLine("2. Delete ");
-                Console.WriteLine("3. Upadate ");
-                Console.WriteLine("4. Read ");
+                Console.WriteLine("------ MENU ------");
+                Console.WriteLine("1 - Create person");
+                Console.WriteLine("2 - Read persons");
+                Console.WriteLine("3 - Update person");
+                Console.WriteLine("4 - Delete person");
+                Console.WriteLine("0 - Exit");
+                Console.Write("Tanlovingiz: ");
 
-                Console.WriteLine("Tanlang : ");
-                string choise = Console.ReadLine();
+                int choice;
+                bool ok = int.TryParse(Console.ReadLine(), out choice);
 
-                if(choise == "1")
-                {
-                    Console.WriteLine("Enter text : ");
-                    string text = Console.ReadLine();
-                    CreateNam(text);
-                }
-                else if(choise == "2")
-                {
-                    Console.WriteLine("Deleted text : ");
-                    string text = Console.ReadLine();
-                    DeleteNam(text);
-                }
-                else if(choise == "3")
-                {
-                    Console.WriteLine("Old text : ");
-                    string oldText = Console.ReadLine();
 
-                    Console.WriteLine("New text");
-                    string newText = Console.ReadLine();
-
-                    UpdeteNam(oldText, newText);
-                }
-                else if (choise == "4")
+                if (choice == 1)
                 {
-                    ReadNam();
+                    Console.Write("Ism kiriting: ");
+                    string name = Console.ReadLine();
+
+                    Console.Write("Passport kiriting: ");
+                    string passport = Console.ReadLine();
+
+                    CreatePerson(name, passport);
                 }
+                else if (choice == 2)
+                {
+                    ReadPerson();
+                }
+                else if (choice == 3)
+                {
+                    Console.Write("Passport kiriting: ");
+                    string passport = Console.ReadLine();
+
+                    Console.Write("Yangi ism kiriting: ");
+                    string newName = Console.ReadLine();
+
+                    UpdatePerson(passport, newName);
+                }
+                else if (choice == 4)
+                {
+                    Console.Write("Passport kiriting: ");
+                    string passport = Console.ReadLine();
+
+                    DeletePerson(passport);
+                }
+                else if (choice == 0)
+                {
+                    Console.WriteLine("Dastur tugadi.");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Noto‘g‘ri tanlov!");
+                }
+
                 Console.ReadKey();
                 Console.Clear();
+               
+
+
             }
 
-
         }
 
-        static void CreateNam(string name)
+        static void CreatePerson(string name, string passport)
         {
-           Names.Add(name); 
+            Person.Add(name + "|" + passport);
         }
-        static void DeleteNam(string name)
+        static void ReadPerson()
         {
-            Names.Remove(name);
-        }
-        static void UpdeteNam(string oldName, string newName)
-        {
-            var index = Names.IndexOf(oldName);
-            if (index != -1)
+            foreach (var p in Person)
             {
-                Names[index] = newName;
+                var parts = p.Split('|');
+                Console.WriteLine($"Ism: {parts[0]}, Passport: {parts[1]}");
             }
         }
-        static void ReadNam()
+        static void UpdatePerson(string passport, string newName)
         {
-            foreach (var n in Names)
+            for (int i = 0; i < Person.Count; i++)
             {
-                Console.WriteLine(n);
+                var parts = Person[i].Split('|');
+                var passportFromList = parts[1];
+
+                if (passportFromList == passport)
+                {
+                    Person[i] = newName + "|" + passportFromList;
+                    break;
+                }
             }
-            Console.WriteLine();
         }
+
+        static void DeletePerson(string passport)
+        {
+            for (int i = 0; i < Person.Count; i++)
+            {
+                var parts = Person[i].Split('|');
+                var passportFromList = parts[1];
+
+                if (passportFromList == passport)
+                {
+                    Person.RemoveAt(i);
+                    break;
+                }
+            }
+        }
+
+
 
     }
 }
