@@ -1,4 +1,6 @@
-﻿namespace darsss6
+﻿using System.Text;
+
+namespace darsss6
 {
     internal class Program
     {
@@ -54,10 +56,64 @@
             //Console.WriteLine(MyIsLower('s'));          // - 15
             //Console.WriteLine(MyIsLower('A'));
 
-            //Console.WriteLine(MyToLower('D'));
+            //Console.WriteLine(MyToLower('D'));     // - 16
 
-            Console.WriteLine(MyPow(3,4));
+            //Console.WriteLine(MyPow(3,4));     // - 17
+
+
+
+            // 1.4.2  # - 1
+            //var firstText = Console.ReadLine();
+            //var numOne = int.Parse(Console.ReadLine());
+            //var secondText = Console.ReadLine();
+            //var numTwo = int.Parse(Console.ReadLine());
+
+            //var partOne = firstText.Substring(0, numOne);
+            //var partTwo = secondText.Substring(secondText.Length - numTwo, numTwo);
+
+            //var res = partOne + partTwo;
+            //Console.WriteLine(res);
+            // ---------------------------------------------------------------------------------
+            //  1.4.1    # - 2
+            //var str = Console.ReadLine();
+            //var charr = 'c';
+
+            //StringBuilder stringBuilder = new StringBuilder();
+
+            //for (var i = 0; i < str.Length; i++)
+            //{
+            //    stringBuilder.Append(str[i]);
+            //    if (str[i] == charr)
+            //    {
+            //        stringBuilder.Append(charr);
+            //    }
+            //}
+            //Console.WriteLine(stringBuilder.ToString());
+            // --------------------------------------------------------------
+
+
+            Console.WriteLine(FirstTexCharSecTex("nmagap" , "ukam", 'p'));    // 1.4.1    # - 3
+
         }
+
+
+        static string FirstTexCharSecTex(string s1, string s2, char bel)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (char ch in s1)
+            {
+                sb.Append(ch);     
+
+                if (ch == bel)
+                {
+                    sb.Append(s2);  
+                }
+            }
+
+            return sb.ToString();
+        }
+
+
         static void repeat(int a)
         {
             for (int i = 1; i <= a; i++)
@@ -220,7 +276,7 @@
                 return true;
             }
             return false;
-            
+
 
         }
 
@@ -239,15 +295,15 @@
 
         static char MyToLower(char ch)   // - 16
         {
-            
-            if(ch >= 'a' && ch <= 'z')
+
+            if (ch >= 'a' && ch <= 'z')
             {
                 return (char)(ch - 32);
             }
             return ch;
         }
 
-        static int MyPow(int a, int b)
+        static int MyPow(int a, int b) // - 17 
         {
             var res = 1;
             for (var i = 0; i < b; i++)
@@ -257,6 +313,8 @@
             return res;
 
         }
+
+
     }
 
 }

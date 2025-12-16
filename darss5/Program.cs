@@ -64,7 +64,7 @@ namespace darss5
                var num = int.Parse(Console.ReadLine()); 
                 list.Add(num);
             }
-            var res = ThreInSevnKarra(list);
+            var res = OddNumCountInAnswer(list);
             Console.WriteLine(res);
         }
 
@@ -110,7 +110,7 @@ namespace darss5
             return res; 
         }
 
-        static int ThreInSevnKarra(List<int> nums)
+        static int ThreInSevnKarra(List<int> nums) // 4
         {
             var res = 0;
             foreach(int num in nums)
@@ -121,6 +121,25 @@ namespace darss5
                 }
             }
             return res;
+        }
+
+        static int OddNumCountInAnswer(List<int> nums)
+        {
+            var res = 0;
+            foreach( int num in nums)
+            {
+               if(num % 2 != 0)
+               {
+                    var onlik = num % 10;
+                    var brli = num / 10;
+                    res = onlik + brli;
+               }
+            }
+                    return res;
+
+
+            
+            
         }
     }
 }

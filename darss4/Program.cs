@@ -61,10 +61,7 @@
             //var str = Console.ReadLine();
             //Console.WriteLine(StarLetterString(str));
 
-            // 19
-            var a = Console.ReadLine();
-
-            Console.WriteLine(WithOutEnd(a));
+           
 
 
 
@@ -377,17 +374,27 @@
             return str.Substring(0, harf);
         }
 
-        static string WithOutEnd(string str)
+        static string WithOutEnd(string str , string secondText) // 7
         {
             if (str == null)
             {
                 throw new ArgumentNullException(nameof(str));
             }
-            if (str.Length < 2)
+            else if (str.Length < 2)
             {
                 return string.Empty;
             }
             return str.Substring(1, str.Length - 2);
+
+            if (secondText == null)
+            {
+                throw new ArgumentNullException(nameof(secondText));
+            }
+            else if (secondText.Length < 2)
+            {
+                return string.Empty;
+            }
+            return str.Substring(1, secondText.Length - 2);
         }
     }
 }
