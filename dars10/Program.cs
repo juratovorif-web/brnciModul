@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32.SafeHandles;
+using System.Reflection.Metadata;
 
 namespace dars10
 {
@@ -58,23 +59,55 @@ namespace dars10
             //Console.WriteLine(modelApple.CameraQuality);
             //Console.WriteLine(modelApple.BatteryCapacity);
 
-            PhoneModel modelSamsung = new PhoneModel();
+            //PhoneModel modelSamsung = new PhoneModel();
 
-            modelSamsung.ModelPhone = "Samsung A55 ";
-            modelSamsung.Sistem = "Android";
-            modelSamsung.Ram = 8;
-            modelSamsung.Memory = 256;
-            modelSamsung.YearOfManufacture = 2024;
-            modelSamsung.CameraQuality = "50 mp";
-            modelSamsung.BatteryCapacity = "5000 A";
+            //modelSamsung.ModelPhone = "Samsung A55 ";
+            //modelSamsung.Sistem = "Android";
+            //modelSamsung.Ram = 8;
+            //modelSamsung.Memory = 256;
+            //modelSamsung.YearOfManufacture = 2024;
+            //modelSamsung.CameraQuality = "50 mp";
+            //modelSamsung.BatteryCapacity = "5000 A";
 
-            Console.WriteLine(modelSamsung.ModelPhone);
-            Console.WriteLine(modelSamsung.Sistem);
-            Console.WriteLine($"{modelSamsung.Ram}/{modelSamsung.Memory}");
-            Console.WriteLine(modelSamsung.YearOfManufacture);
-            Console.WriteLine(modelSamsung.CameraQuality);
-            Console.WriteLine(modelSamsung.BatteryCapacity);
+            //Console.WriteLine(modelSamsung.ModelPhone);
+            //Console.WriteLine(modelSamsung.Sistem);
+            //Console.WriteLine($"{modelSamsung.Ram}/{modelSamsung.Memory}");
+            //Console.WriteLine(modelSamsung.YearOfManufacture);
+            //Console.WriteLine(modelSamsung.CameraQuality);
+            //Console.WriteLine(modelSamsung.BatteryCapacity);
+            // ---------------------------------------------------------------------------------------------------------------
 
+
+
+
+            //Stock TvsLg = new Stock();
+
+            //TvsLg.ProductsList = 6 ;
+            //TvsLg.BrendProduct = "LG ";
+            //TvsLg.ModelProduct = "LG OLED77G2RLA";
+            //TvsLg.PoductAmount = "51.690.000 so'm";
+            //TvsLg.ForTwelveMonths = "7.325.000 so'm";
+
+            //Console.WriteLine($"{TvsLg.ProductsList} ta ");
+            //Console.WriteLine($"Brend - {TvsLg.BrendProduct}");
+            //Console.WriteLine($"Model - {TvsLg.ModelProduct}");
+            //Console.WriteLine($"Narxi - {TvsLg.PoductAmount}");
+            //Console.WriteLine($"12 oyga - {TvsLg.ForTwelveMonths}");
+            //Console.WriteLine();
+
+            Stock TvsSamsung = new Stock();
+
+            TvsSamsung.ProductsList = 11;
+            TvsSamsung.BrendProduct = "Samsung ";
+            TvsSamsung.ModelProduct = "QE75Q8FAA Smart";
+            TvsSamsung.PoductAmount = "34.745.000 so'm";
+            TvsSamsung.ForTwelveMonths = "4.960.000 so'm";
+
+            Console.WriteLine($"{TvsSamsung.ProductsList} ta ");
+            Console.WriteLine($"Brend - {TvsSamsung.BrendProduct}");
+            Console.WriteLine($"Model - {TvsSamsung.ModelProduct}");
+            Console.WriteLine($"Narxi - {TvsSamsung.PoductAmount}");
+            Console.WriteLine($"12 oyga - {TvsSamsung.ForTwelveMonths}");
 
 
 
