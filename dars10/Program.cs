@@ -1,7 +1,4 @@
-﻿using Microsoft.Win32.SafeHandles;
-using System.Reflection.Metadata;
-
-namespace dars10
+﻿namespace dars10
 {
     internal class Program
     {
@@ -95,19 +92,36 @@ namespace dars10
             //Console.WriteLine($"12 oyga - {TvsLg.ForTwelveMonths}");
             //Console.WriteLine();
 
-            Stock TvsSamsung = new Stock();
+            //Stock TvsSamsung = new Stock();
 
-            TvsSamsung.ProductsList = 11;
-            TvsSamsung.BrendProduct = "Samsung ";
-            TvsSamsung.ModelProduct = "QE75Q8FAA Smart";
-            TvsSamsung.PoductAmount = "34.745.000 so'm";
-            TvsSamsung.ForTwelveMonths = "4.960.000 so'm";
+            //TvsSamsung.ProductsList = 11;
+            //TvsSamsung.BrendProduct = "Samsung ";
+            //TvsSamsung.ModelProduct = "QE75Q8FAA Smart";
+            //TvsSamsung.PoductAmount = "34.745.000 so'm";
+            //TvsSamsung.ForTwelveMonths = "4.960.000 so'm";
 
-            Console.WriteLine($"{TvsSamsung.ProductsList} ta ");
-            Console.WriteLine($"Brend - {TvsSamsung.BrendProduct}");
-            Console.WriteLine($"Model - {TvsSamsung.ModelProduct}");
-            Console.WriteLine($"Narxi - {TvsSamsung.PoductAmount}");
-            Console.WriteLine($"12 oyga - {TvsSamsung.ForTwelveMonths}");
+            //Console.WriteLine($"{TvsSamsung.ProductsList} ta ");
+            //Console.WriteLine($"Brend - {TvsSamsung.BrendProduct}");
+            //Console.WriteLine($"Model - {TvsSamsung.ModelProduct}");
+            //Console.WriteLine($"Narxi - {TvsSamsung.PoductAmount}");
+            //Console.WriteLine($"12 oyga - {TvsSamsung.ForTwelveMonths}");
+
+
+            Ticket Bilet = new Ticket();
+
+            Bilet.From = "Tashkent";
+            Bilet.To = "Moscow";
+            Bilet.Passenger = "Fozil";
+            Bilet.Price = 4500000;
+            Bilet.SeatNumber = "A9";
+
+            Console.WriteLine($"From {Bilet.From}");
+            Console.WriteLine($"To {Bilet.To}");
+            Console.WriteLine($"Pessenger {Bilet.Passenger}");
+            Console.WriteLine($"Ticket price {Bilet.Price}");
+            Console.WriteLine($"Your place {Bilet.SeatNumber}");
+
+
 
 
 
